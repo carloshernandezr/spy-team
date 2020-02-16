@@ -1,0 +1,30 @@
+{
+  "name": "spy-team",
+  "version": "1.0.0",
+  "description": "Generator profile ",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloshernandezr/spy-team.git"
+  },
+  "keywords": [
+    "Generator",
+    "profile"
+  ],
+  "author": "Carlos Hernandez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carloshernandezr/spy-team/issues"
+  },
+  "homepage": "https://github.com/carloshernandezr/spy-team#readme",
+  "dependencies": {
+    "inquirer": "^7.0.4"
+  }
+}
