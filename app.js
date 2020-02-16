@@ -1,31 +1,9 @@
 //.
 const inquirer = require("inquirer");
+const Manager = require("./lib/manager");
 let workTeam = [];
 
-// inquirer
-//   .prompt([
-//     {
-//       type: "                   ",
-//       message: "What is your user name?",
-//       name: "username"
-//     },
-//     {
-//       type: "",
-//       message: "",
-//       name: ""
-//     },
-
-
-//   ])
-//   .then(function(response) {
-
-//     if (response.confirm === response.password) {
-//       console.log("Success!");
-//     }
-//     else {
-//       console.log(" !");
-//     }
-//   });
+ 
 
 
 
@@ -49,13 +27,13 @@ async function getData() {
           type: "input",
           message: "What is the Employee's ID?",
           name: "id",
-         // validate: validateNumber,
+          validate: validateNumber,
         },
         {
           type: "input",
           message: "What is the Employee's Email?",
           name: "email",
-          //validate: validateEmail,
+          validate: validateEmail,
         },
       ]);
     //   prompts questions based on the title that was selected for the employee then creates an employee object and pushes it to the teamArray
@@ -115,3 +93,34 @@ async function getData() {
 
 
 getData();
+
+
+
+
+
+function validateEmail(value) {
+  let validateE = /\S+@\S+\.\S+/;
+  if (value.search(validateE) !== -1 && value.length > 0) {
+    return true;
+  } else {
+    console.log("\nEnter a valid email  ( for example: test@test.com)");
+    return false;
+  }
+}
+
+
+ 
+function validateNumber(value) {
+
+  var numbers = /^[0-9]+$/;
+      if(value.match(numbers))
+      {
+          return true;
+      }
+      else
+      {
+        console.log("\nEnter a valid number");
+        return false;
+      }
+
+}
