@@ -1,5 +1,4 @@
-function generateHTML(CardTeamStr) {
-    return `<!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   
       <head>
@@ -55,7 +54,22 @@ function generateHTML(CardTeamStr) {
   
                   <!-- team content start -->
                   <div class="columns is-multiline">
-                          ${CardTeamStr}
+                          <div class="column is-4">
+                    <div class="card has-shadow">
+                        <header class="header text-left  ">
+                        <h1 class="title is-capitalized ">  &nbsp;carlos l</h2> 
+                        <h1 class="title is-uppercase m-b-lg">&nbsp;<i class="fab fa-black-tie"></i> Manager</h1> </header>
+                    
+                        <div class="card-content">
+                        <ul>
+                         
+                            <li class="subtitle">ID:  33</li>
+                            <li class="subtitle">Email:  carflos@devcodify.com</li>
+                            <li class="subtitle is-capitalized"> Office Number: 34</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
                   </div>
                   <!-- team content end -->
               </div>
@@ -73,8 +87,4 @@ function generateHTML(CardTeamStr) {
           <!-- footer end -->
       </body>
   
-  </html>`;
-  }
-  
-  exports.generateHTML = generateHTML;
-  
+  </html>
